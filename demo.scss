@@ -1,0 +1,43 @@
+.demo-start {
+	// overflow: auto !important;
+	cursor: default;
+	z-index: 20;
+	// display: none;
+	div {
+		padding: 20px;
+	}
+	button {
+
+	}
+
+	.demo-pages {
+		width: 0px;
+		// overflow: hidden;
+	}
+
+}
+
+.modal-appear {
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	opacity: 1;
+	transition: opacity 2s ease;
+}
+
+.close-window {
+	color: $color5;
+	padding: 5px 10px;
+	border-radius: 100%;
+}
+
+button.demo {
+	margin: 200px auto;
+	opacity: 0;		
+}
+
+.view-demo {
+	opacity: 1 !important;
+	transition: opacity 0.2s ease-in-out;
+}

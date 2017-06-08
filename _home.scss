@@ -1,0 +1,123 @@
+.intro-title {
+	position: absolute;
+
+	@media (max-width: 600px) {
+		width: 300px;
+		height: auto;
+	}
+}
+
+.intro-title.turtle {
+	left: -404px;
+	top: 80px;
+	// left: 30.5%;
+}
+
+.turtle-move {
+	left: 30% !important;
+	transition: left 0.5s ease-in-out;
+}
+
+.turtle-move2 {
+	left: 42% !important;
+	transition: left 2s ease-in-out;
+}
+
+.turtle-move3 {
+	left: 100% !important;
+	transition: left 0.5s ease-in-out;
+}
+
+.turtle-move4 {		// this is only necessary for compatability with IE 
+	left: -1000px !important;
+	transition: left 0s linear;
+}
+
+.intro-title.draft {
+	right: -404px;
+	top: 189px;
+	// right: 30%;
+}
+
+.draft-move {
+	right: 30% !important;
+	transition: right 0.5s ease-in-out;
+}
+
+.draft-move2 {
+	right: 42% !important;
+	transition: right 2s ease-in-out;
+}
+
+.draft-move3 {
+	right: 100% !important;
+	transition: right 0.5s ease-in-out;
+}
+
+.welcome-pitch {
+	// opacity: 0;
+	position: absolute;
+	font-size: 1.5rem;
+	color: $color2;
+	top: 110%;
+}
+
+.welcome-pitch-move {
+	top: 55%;
+	left: 40%;
+	transition: top 0.5s ease-in-out;
+	opacity: 1;
+}
+
+.welcome-pitch-move2 {
+	left: 110px;
+	top: -10px;
+	transition: all 0.5s ease-in-out;
+	transition-property: top, left;
+
+	@media (max-width: 800px) {
+		opacity: 0;
+		left: 110px;
+		top: -50px;
+		transition: all 0.5s ease-in-out;
+		transition-property: top, left, opacity;
+	}
+
+}
+
+.main-content {
+	color: white;
+	background: transparent;
+	margin: 20px auto;
+	display: absolute;
+} 
+
+.forgot-password-appear {
+	width: 600px;
+	height: auto;
+	transition: width 0.15s ease-in-out;
+}
+
+.modal {
+	opacity: 0;
+}
+
+.modal-appear {
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	opacity: 1;
+	transition: opacity 1s ease;
+}
+
+.close-modal {
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 10px;
+	position: relative;
+	bottom: 6px;
+	left: 6px;
+	opacity: 1;
+	transition: opacity 0.2s;
+}

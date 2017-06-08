@@ -1,0 +1,17 @@
+
+$button-font: 'Ubuntu', sans-serif;
+$button-width: 250px;
+$button-radius: 2px;
+$input-radius: 0px;
+$form-radius: 0px;
+$font-size: 1.2rem;
+$nav-radius: 0px;
+
+@import 'setup';
+@import 'colors';
+@import 'base-elements';
+@import 'home';
+@import 'nav';
+@import 'forms';
+@import 'footer';
+@import 'demo';

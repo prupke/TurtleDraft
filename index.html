@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Project 3</title>
+
+	<!-- Meta tags!  -->
+
+	<meta charset="utf-8">
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="Turtle Draft">
+	<meta property="og:url" content="http://www.turtledraft.com">
+	<meta property="og:image" content="Images/turtle.png">
+	<meta property="business:contact_data:locality" content="Toronto">
+	<meta property="business:contact_data:region" content="Ontario">
+	<meta property="business:contact_data:country_name" content="Canada">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Turtle Draft. Draft at your own pace.">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Paul Rupke">
+
+	<!-- Links Icons, & Scripts -->
+
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="Icons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="Icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png">
+	<link rel="manifest" href="Icons/manifest.json">
+	<link rel="mask-icon" href="Icons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+
+	<script src="https://use.fontawesome.com/f034a980db.js"></script>
+
+</head>
+<body>
+	<main>
+		<img src="Images/turtle-text.png" class='intro-title turtle'>
+		<img src="Images/draft-text.png" class='intro-title draft'>
+		<div class="main-content">
+			<button class='modal demo'>
+				View demo
+			</button>
+			
+		</div>
+
+		<nav>
+			<div class='nav__left'>
+				<div class='nav__logo-container'>
+					<img src="Images/logo.png" class='logo'>
+				</div>
+
+			</div>
+			
+			<div class='nav__right'>
+				<ul>
+					<li>
+						<button class='nav__buttons'>
+							<i class="fa fa-home nav__icons" aria-hidden="true"></i>
+							<span class='.nav__li'>home</span>
+						</button>
+					</li> 
+					<li>
+						<button class='nav__buttons demo-button'>
+						<i class="fa fa-desktop nav__icons" aria-hidden="true"></i>						
+							<span class='.nav__li'>demo</span>
+						</button>
+						<aside class= 'modal demo-start'>
+							
+							<div class='demos demo-page1'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad placeat nisi aperiam? Cupiditate dolores placeat 
+								<div class='submit-button demo-next'>
+									<button class='demo-next'>
+										>
+									</button>
+								</div>
+							</div>
+						
+							<div class='demos demo-page2 display-none'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad placeat nisi aperiam? Cupiditate dolores placeat pariatur, libero natus illum corporis nam, harum, doloremque exercitationem mollitia nos
+							
+								<div class='submit-button demo-next'>
+									<button>
+										>
+									</button>
+								</div>
+							</div>
+							<div class='demos demo-page3 display-none'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad placeat nisi aperiam? Cupiditate dolores placeat pariatur, libero natus illum corporis nam, harum, 
+								<div class='submit-button demo-next'>
+									<button>
+										>
+									</button>
+								</div>
+							</div>	
+							<div class='demos demo-page4 display-none'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							
+								<div class='submit-button demo-next'>
+									<button>
+										>
+									</button>
+								</div>
+							</div>
+							<div class='demos demo-page5 display-none'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad placeat nisi aperiam? Cupiditate dolores placeat pariatur, libero natus illum corporis nam, harum, doloremque exercitationem mollitia nostrum consectetur numquam quasi.
+								<div class='submit-button'>
+									<label for='sign-up'>
+										<button nav__buttons sign-up-button'>
+											Sign up now!
+										</button>
+									</label>
+								</div>
+							</div>
+											
+						</aside>						
+					</li>
+					<li>
+						<button class='nav__buttons sign-up-button'>
+						<i class="fa fa-user-plus nav__icons" aria-hidden="true"></i>
+							<span class='.nav__li'>sign&nbspup</span>
+						</button>
+						<aside class='modal'>		
+							<form class='signup'>
+								<div class='form-title'>
+									<img src="Images/logo.png" class='form-logo'>
+									<button class='nav__buttons close-window'>
+										x
+									</button>
+								</div>
+								<!-- <h1><span>turtle</span><span class='title-draft'>draft</span></h1> -->
+								<input required type="text" name="username" placeholder="Username" id='username' class='required-input'>
+								<label for='username' >Username:</label>
+								<input pattern=".{6,}" required title="6 characters minimum" type="password" name="password" placeholder="Password" id='password' class='required-input'>
+								<label for='password'>Password:</label>
+								<input pattern=".{6,}" required title="6 characters minimum" type="password" name="password" placeholder="Confirm password" id='confirm-password' class='required-input'>
+								<label for='confirm-password'>Confirm password:</label>					
+								<input type="email" required name="email" placeholder="Email" id='email' class='required-input'>
+								<label for='email'>Email:</label>
+								<div class='submit-button'>
+									<input type='submit' name='submit' id='submit' value='Sign up'>
+								</div>
+								<p class='remember-me'>						
+									<input class='styled-checkbox' type="checkbox" id="remember" name="remember">
+									<label for="remember">
+										<span>Remember me</span>
+									</label>
+								</p>				
+								<button class='nav__buttons forgot-password'>
+									Forgot your password?
+								</button>
+								
+							</form>
+						</aside>
+					</li>
+					<li>
+						<button class='nav__buttons login-button'>
+							<i class="fa fa-sign-in nav__icons" aria-hidden="true"></i>
+							<span class='.nav__li'>login</span>
+						</button>
+						<aside class='modal'>		
+							<form class='login'>
+								<div class='form-title'>
+									<img src="Images/logo.png" class='form-logo'>
+									<button class='nav__buttons close-window'>
+										x
+									</button>
+								</div>
+								<input type="text" required name="username" placeholder="Username" id='username' class='required-input'>
+
+								<label for='username' >Username:</label>
+								<input pattern=".{6,}" required title="6 characters minimum" type="password" name="password" placeholder="Password" id='password' class='required-input'>
+								<label for='password'>Password:</label>
+								<div class='submit-button'>
+									<input type='submit' name='submit' id='submit' value='Login'>
+								</div>
+								
+								<p class='remember-me'>						
+									<input class='styled-checkbox' type="checkbox" id="remember-login" name="remember">
+									<label for="remember-login">
+										<span>Remember me</span>
+									</label>
+								</p>				
+								<button class='nav__buttons forgot-password'>
+									Forgot your password?
+								</button>
+								
+							</form>
+						</aside>
+					</li>
+				</ul>
+				<aside class='modal forgot-password-modal'>		
+					<form class='login forgot'>
+						<div class='form-title'>
+							<img src="Images/logo.png" class='form-logo'>
+							<button class='nav__buttons close-window'>
+								x
+							</button>
+						</div>
+						<input type="email" required name="email" placeholder="Email" id='email' class='required-input'>
+						<label for='email'>Email:</label>
+						<input type='submit' name='submit' id='submit' value='Reset password'>
+					</form>
+				</aside>
+					
+			</div>
+		</nav>
+		<p class="welcome-pitch">draft at your own pace.</p>
+		<div class='video-container'>
+			<video poster="Images/hockey-background.jpg" autobuffer='autobuffer' autoplay muted>
+				<source src="Videos/hockey-background.mp4">
+				<!-- http://md-akc.med.nhl.com/mp4/nhl/2017/01/02/0b9cd065-f2d1-47d3-a78c-484bd9b653bc/1483391338932/asset_1800k.mp4 -->
+			</video>
+		</div>
+		<div class='intro'>
+
+		</div>
+	</main>
+
+	<footer>
+		<div class='footer-left'>
+			<a href="#">© rupke designs</a>
+		</div>
+		<div class="footer-right">
+			<ul>
+				<li><a href="#">contact</a></li>
+				<li><a href="#">site feedback</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<aside id='forgot-password-modal'>	
+		<form>
+			<div class='form-title'>
+				<img src="Images/logo.png" class='form-logo'>
+			<label for='home'>
+				<a class='close-modal'>x</a>
+			</label>
+			</div>
+			<input type="email" required name="email" placeholder="Email" id='email' class='required-input'>
+			<label for='email'>Email:</label>
+			<div class='submit-button'>
+				<input type='submit' name='submit' id='submit' value='Reset password'>
+			</div>
+		</form>
+	</aside>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src='script.js'></script>
+
+</body>
+</html>

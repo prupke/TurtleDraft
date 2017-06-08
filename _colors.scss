@@ -1,0 +1,59 @@
+// Grey shades color scheme 
+// $color1: rgba(38, 50, 56, 0.6);
+// $color2: rgba(0, 10, 18, 1);  // darker
+// $color3: rgba(79, 91, 98, 0.9);   // lighter
+
+
+// $color1: rgba(38, 50, 56, 0.8);
+// $color2: rgba(0, 10, 18, 1);  // darker
+
+
+$color1: rgba(38,38,38, 0.6);  // gradient after
+$color2:rgba(99, 164, 255, 0.9); // button background
+$color3: rgba(38,38,38, 0.9);  // gradient before
+
+// Blue shades color scheme
+// $color1:rgba(25, 118, 210, 0.6); // gradient after
+// $color2:rgba(99, 164, 255, 0.9); // button background
+// $color3:rgba(99, 164, 255, 0.5); // gradient before
+
+$color4: white;  // text color
+$color5: rgba(99, 164, 255, 0.4);  // for placeholder & hover states
+// $color1: #061539;
+$color6: rgb(38,38,38);// forgot password box
+$footer-color: #262626;
+$greyed-out-color: #b8b8b8;
+
+
+
+$light-color: #ffffff;
+
+$default-link-color: white;
+
+::-webkit-input-placeholder { /* Chrome */
+  color: $color5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $color5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $color5;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: $color5;
+  opacity: 1;
+}
+
+
+.title-turtle {
+		font-family: 'Ubuntu', sans-serif;
+
+	margin-top: 0px;
+	background: white;
+}
+
+.title-draft {
+	color: white;
+	// background-color: $color2;
+}

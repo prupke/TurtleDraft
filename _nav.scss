@@ -1,0 +1,151 @@
+
+nav {
+	padding-top: 0px;
+	width: 100%;
+	min-width: 340px;
+	height: 60px;
+	margin: 0px auto;
+	position: fixed;
+	top: 0px;
+	display: flex;
+	background: $color2; /* Old browsers that do not support linear-gradients */
+	background: -moz-linear-gradient(top, $color3 0%, $color1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color3), color-stop(100%,$color1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color3 0%,$footer-color 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color3 0%,$color1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color3 0%,$color1 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $color3 0%,$color1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color3', endColorstr='$color1',GradientType=0 ); /* IE6-9 */
+}
+
+.nav__left, .nav__right {
+	list-style-type: none;
+	display: flex;
+	margin: auto;
+}
+
+.nav__left {
+	max-width: 110px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+	
+.nav__logo-container {
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	margin-left: auto;
+	padding: 5px;
+	margin: 7px 5px;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.nav__right {
+	max-width: 600px;
+	margin-right: 10px;
+
+	> ul {
+		list-style-type: none;
+		display: flex;
+		margin: -5px;
+		height: 100%;
+
+		> li {
+			font-size: 0.9rem;
+		    font-family: 'Ubuntu', sans-serif;
+		    text-transform: uppercase;
+			}
+	}
+}
+
+	.nav-right > ul > li, .nav-right i {
+
+	    // label {
+	    // 	padding: 20px 15px 20px;
+
+	    // 	@media (max-width: 600px) {
+	    // 		padding: 20px 5px 20px;
+	    // 	}
+
+	    // }
+	}
+
+	@media (max-width:600px) {
+		justify-content: space-between;
+
+		.nav__right {
+			
+			>ul {
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+				width: 100%;
+				>li {
+					padding-left: 1px;
+					padding-right: 0;
+				}
+			}
+		}
+
+		.nav__left {
+			padding: 0 0 0 5px;
+			margin: 0;
+			width: 90px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.nav__logo-container {
+				margin-left: 0;
+				margin-right: 0;
+				padding-right: 0;
+				width: 100%;
+			} 
+
+		li {
+			padding: 2px;
+			margin-left: 1px;
+			margin-right: 0px;
+		}
+
+		i {
+			display: none;
+		}
+	}
+
+.nav__buttons {
+	text-transform: uppercase;
+	background: none;
+	height: 100%;
+	padding: 22px 12px;
+	border-radius: 0;
+	margin: 0;
+
+	&:hover,
+	&:focus {
+		outline: none;
+		background: $color5;
+		transition: color 0.15s ease;
+	}
+}
+
+.nav__li {
+	font-size: 0.9rem;
+	font-family: 'Ubuntu', sans-serif;
+	text-transform: uppercase;
+}
+
+.nav__icons {
+	color: $color2;
+}
