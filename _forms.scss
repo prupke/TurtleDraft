@@ -42,7 +42,7 @@ button {
 form {
 	// box-shadow: -2px 2px darken($color2, 10%);
 	// border: 1px solid $color2;
-	align-items: space-between;
+	align-items: center;
 	min-height: 150px;
 	display: flex;
 	flex-direction: column;
@@ -110,11 +110,12 @@ form {
 	}
 
 	input[type='text'], input[type='password'], input[type='email'] {
+		display: flex;
 		color: white;
 		text-align: left;
 		font-size: $font-size;
 		display: block;
-		height: 40px;
+		// height: 40px;
 		width: 60%;
 		background-repeat: no-repeat;
 		background-position: 97%;

@@ -201,7 +201,7 @@ main {
   width: 100vw;
   height: 99vh;
   overflow: hidden;
-  z-index: -2; }
+  z-index: -3; }
   .video-container > video {
     display: block;
     position: absolute;
@@ -479,6 +479,7 @@ button.demo {
   margin: 0px auto; }
 
 .demos {
+  width: 600px;
   color: white;
   margin: 5px;
   padding: 5px 0px;
@@ -489,13 +490,13 @@ button.demo {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   top: 80px;
   left: calc(50% - 300px);
   overflow: hidden;
-  transition: top 1s ease;
+  transition: width 1s ease;
   background: rgba(38, 38, 38, 0.9);
   /* Old browsers that do not support linear-gradients */
   background: -moz-linear-gradient(top, rgba(38, 38, 38, 0.9) 0%, rgba(38, 38, 38, 0.6) 100%);
@@ -517,13 +518,15 @@ button.demo {
   .demos .demo-next,
   .demos .demo-prev {
     width: 30px;
-    margin: 5px; }
+    margin: 10px 5px 5px 5px;
+    text-align: center; }
   .demos .demo-prev {
     position: relative;
     left: -40px; }
 
 .display-none {
-  display: none; }
+  display: none;
+  width: 0px; }
 
 input[type='submit'],
 button {
@@ -571,9 +574,9 @@ button {
   align-items: center; }
 
 form {
-  -webkit-align-items: space-between;
-  -ms-flex-align: space-between;
-  align-items: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 150px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -635,11 +638,13 @@ form {
   form input[name='email'] {
     background: url(Icons/envelope.png); }
   form input[type='text'], form input[type='password'], form input[type='email'] {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     color: white;
     text-align: left;
     font-size: 1.2rem;
     display: block;
-    height: 40px;
     width: 60%;
     background-repeat: no-repeat;
     background-position: 97%;

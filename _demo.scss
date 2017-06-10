@@ -24,6 +24,7 @@ button.demo {
 }
 
 .demo-button-wrapper {
+	// z-index: ;
 	color: white;
 	background: transparent;
 	margin: 20px auto;
@@ -40,20 +41,20 @@ button.demo {
 }
 
 .demos {
-	// width: 800px;
+	width: 600px;
 	color: white;
 	margin: 5px;
 	padding: 5px 0px;
 	height: auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	align-items: flex-start;
 	// position: absolute;
 	top: 80px;
 	left: calc(50% - 300px);
 	overflow: hidden;
 	// opacity: 0;
-	transition: top 1s ease;
+	transition: width 1s ease;
 	background: $color3; /* Old browsers that do not support linear-gradients */
 	background: -moz-linear-gradient(top, $color3 0%, $color1 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color3), color-stop(100%,$color1)); /* Chrome,Safari4+ */
@@ -70,7 +71,8 @@ button.demo {
 	.demo-next, 
 	.demo-prev {
 		width: 30px;
-		margin: 5px;
+		margin: 10px 5px 5px 5px;
+		text-align: center;
 	}
 
 	.demo-prev {
@@ -81,4 +83,5 @@ button.demo {
 
 .display-none {
 	display: none;
+	width: 0px;
 }
