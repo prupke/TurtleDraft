@@ -126,16 +126,17 @@ form {
 		outline: 1px solid lighten($color3, 15%);
 
 		&:hover {
-			outline: 3px solid $color2;
-			transition: outline 0.05s ease;
+			outline: 2px solid $color2;
+			transition: outline 0.1s ease-out;
 			// width: 59.8%;
 		}
 
 		&:focus, &:active {
-			border: none;
-			width: 59.2%;
-			outline: 4px solid $color2;
-			transition: width 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			// border: 2px lighten($color2, 5%);
+			width: 59.7%;
+			outline: 3px solid $color2;
+			transition: all 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			transition-property: width, outline;
 
 			@media (max-width: 600px) {
 				width: 89%;
@@ -194,7 +195,7 @@ form {
 	}
 
 	@media (max-width: 600px) {
-		max-width: 100vw;
+		width: 100vw;
 		padding: 0;
 		margin: 0px auto;
 	}
@@ -202,7 +203,38 @@ form {
 }
 
 .forgot-password-modal {
-	opacity: 0;
+	// opacity: 0;
+}
+
+.forgot-password-appear {
+	width: 600px;
+	height: auto;
+	transition: width 0.15s ease-in-out;
+}
+
+.modal {
+	// opacity: 0;
+	transition: opacity 0.2s ease;
+	top: -100px;
+}
+
+.modal-appear {		// this class is called in a script and added to the .modal class
+	border-radius: $form-radius;
+	top: 70px;
+	width: 600px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	opacity: 1;
+	transition: top 0.2s ease;
+}
+
+.close-window {   	// this styles the 'x' in the modal windows of the landing page
+	text-transform: none;
+	color: $color5;
+	padding: 1px 12px;
+	border-radius: 4px;
 }
 
 .remember-me .styled-checkbox {
@@ -274,7 +306,7 @@ form {
 	&:checked + label:after {
 	content: '';
 	position: absolute;
-	right: 119px;
+	right: 121px;
 	top: 12px;
 	background: white;
 	width: 2px;

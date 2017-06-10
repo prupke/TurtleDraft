@@ -17,27 +17,68 @@
 
 }
 
-.modal-appear {
-	width: 600px;
-	display: flex;
-	flex-direction: column;
-	height: auto;
-	opacity: 1;
-	transition: opacity 2s ease;
-}
-
-.close-window {
-	color: $color5;
-	padding: 5px 10px;
-	border-radius: 100%;
-}
-
 button.demo {
 	margin: 200px auto;
 	opacity: 0;		
+	transition: opacity 0.2 ease;
 }
+
+.demo-button-wrapper {
+	color: white;
+	background: transparent;
+	margin: 20px auto;
+	display: absolute;
+} 
 
 .view-demo {
 	opacity: 1 !important;
-	transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease;
+}
+
+.sign-up-button {
+	margin: 0px auto;
+}
+
+.demos {
+	// width: 800px;
+	color: white;
+	margin: 5px;
+	padding: 5px 0px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	// position: absolute;
+	top: 80px;
+	left: calc(50% - 300px);
+	overflow: hidden;
+	// opacity: 0;
+	transition: top 1s ease;
+	background: $color3; /* Old browsers that do not support linear-gradients */
+	background: -moz-linear-gradient(top, $color3 0%, $color1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color3), color-stop(100%,$color1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color3 0%,$color1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color3 0%,$color1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color3 0%,$color1 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $color3 0%,$color1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color3', endColorstr='$color1',GradientType=0 ); /* IE6-9 */
+	
+	.demo-slide-text {
+		padding: 0;
+	}
+
+	.demo-next, 
+	.demo-prev {
+		width: 30px;
+		margin: 5px;
+	}
+
+	.demo-prev {
+		position: relative;
+		left: -40px;
+	}
+}
+
+.display-none {
+	display: none;
 }

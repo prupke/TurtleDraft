@@ -74,7 +74,8 @@
 	top: -10px;
 	transition: all 0.5s ease-in-out;
 	transition-property: top, left;
-
+	position: fixed;
+	
 	@media (max-width: 800px) {
 		opacity: 0;
 		left: 110px;
@@ -85,39 +86,4 @@
 
 }
 
-.main-content {
-	color: white;
-	background: transparent;
-	margin: 20px auto;
-	display: absolute;
-} 
 
-.forgot-password-appear {
-	width: 600px;
-	height: auto;
-	transition: width 0.15s ease-in-out;
-}
-
-.modal {
-	opacity: 0;
-}
-
-.modal-appear {
-	width: 600px;
-	display: flex;
-	flex-direction: column;
-	height: auto;
-	opacity: 1;
-	transition: opacity 1s ease;
-}
-
-.close-modal {
-	font-size: 1rem;
-	cursor: pointer;
-	padding: 10px;
-	position: relative;
-	bottom: 6px;
-	left: 6px;
-	opacity: 1;
-	transition: opacity 0.2s;
-}

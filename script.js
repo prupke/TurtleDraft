@@ -1,6 +1,8 @@
 
 		$(function() {
 
+			var modalActive=false;	
+
 			function detectmobile() { 
 
 			    if( navigator.userAgent.match(/Android/i)
@@ -47,45 +49,53 @@
 		     $('.turtle').addClass('turtle-move4');
 		    }, 1850);
 
-		    setTimeout(function() {   // this is only necessary for compatability with IE 
-		     $('.demo').addClass('view-demo');
+		    setTimeout(function() {   
+		    	if(modalActive===false) {
+		     		$('.demo').addClass('view-demo');
+		     	}
 		    }, 1850);
 
-		    $('.forgot-password').click(function() {
-		    	$('#forgot-password-modal').addClass('forgot-password-appear');
-		    }
-		    );
-
 		    $('button.nav__buttons').on('click', (function() {
+		    	var modalActive=true;
 		    	$('.modal').removeClass('modal-appear');
 		    	$('button.demo').removeClass('view-demo');
 		    	$(this).next().addClass('modal-appear');
-		    })
-		    );
+		    }));
 
-		    $('.demos').on('click', (function() {
-		    	$(this).addClass('display-none');
-		    	$(this).next().removeClass('display-none');
-
-		    })
-		    );
+		    $('.demo-next').on('click', (function() {
+		    	$('.demos').addClass('display-none');
+		    	$(this).next().closest('.demos').removeClass('display-none');
+		    }));
 
 		    $('.forgot-password').on('click', (function() {
 		    	$('.forgot-password-modal').addClass('modal-appear');
+		    	var modalActive=true;
 
-		    })
-		    );
+		    }));
+
+		    $('.sign-up-button').on('click', (function() {
+		    	$('.sign-up-modal').addClass('modal-appear');
+		    	var modalActive=true;
+
+		    }));
 		  
 		    $('button.demo').on('click', (function() {
 		    	$('button.demo').removeClass('view-demo');
 		    	// $('#demo').prop('checked', true); 
 		    	$('aside.demo-start').addClass('modal-appear');
-		    })
-		    );
+		    	// $('aside.demo-start').removeClass('display-none');
+		    	$('.demos').addClass('display-none');
+		    	$('.demo-page1').removeClass('display-none');
+		    }));
 
 		    $('.close-window').on('click', (function() {
 		    	$('button.demo').addClass('view-demo');
-		    })
-		    );
+		    	var modalActive=false;
+		    }));
+
+		    $('.demo-button').on('click', (function() {
+		    	$('.demos').addClass('display-none');
+		    	$('.demo-page1').removeClass('display-none');
+		    }));
 
 		});

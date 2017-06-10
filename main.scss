@@ -3,7 +3,7 @@ $button-font: 'Ubuntu', sans-serif;
 $button-width: 250px;
 $button-radius: 2px;
 $input-radius: 0px;
-$form-radius: 0px;
+$form-radius: 4px;
 $font-size: 1.2rem;
 $nav-radius: 0px;
 
@@ -12,6 +12,7 @@ $nav-radius: 0px;
 @import 'base-elements';
 @import 'home';
 @import 'nav';
+@import 'demo';
 @import 'forms';
 @import 'footer';
-@import 'demo';
+

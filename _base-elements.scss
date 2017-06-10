@@ -75,6 +75,7 @@ main {
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		pointer-events: none;
 
 	}
 }
@@ -129,14 +130,12 @@ img {
 aside {
 	width: 0;
 	display: none;
-	// min-width: 400px;
 	height: 0%;
 	position: absolute;
-	top: 80px;
+	top: -100px;
 	left: calc(50% - 300px);
 	overflow: hidden;
-	opacity: 0;
-	transition: opacity 1s ease;
+	transition: top 1s ease;
 }
 
 body {
