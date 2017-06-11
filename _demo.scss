@@ -25,11 +25,11 @@
 }
 
 button.demo {
-	margin: 330px auto;
+	margin: 330px auto 0;
 	opacity: 0;		
-	transition: opacity 0.2 ease;
+	transition: opacity 0.1 ease-in;
 	@media (max-width: 800px) {
-		margin: 250px auto;
+		margin: 280px auto 0;
 	}
 }
 
@@ -94,6 +94,12 @@ button.demo {
 			padding: 5px;
 			border-bottom: 2px solid $color5;
 			font-size: 1.7rem;
+			text-align: left;
+
+			i {
+				font-size: 2.4rem;
+				padding: 0 15px 0 0;
+			}
 		}
 
 		p {

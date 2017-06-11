@@ -66,6 +66,17 @@ form {
 	// @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	// 	align-items: center;
 	// }
+	i.fa {
+		color: $color5;
+		font-size: 3.0rem;
+		margin: 2px 0 0 10px;
+	}
+
+	i.fa-window-close {
+		font-size: 1.5rem;
+		position: relative;
+		right: 5px;
+	}
 
 	.form-title {
 		display: flex;
@@ -74,10 +85,12 @@ form {
 		margin: 0;
 		padding: 0 4px;
 		width: 100%;
-	
-		.form-logo {
-			width: 100px;
+
+		button {
+			padding: 2px 7px;
+			margin: 0;
 		}
+	
 		> label {
 			padding: 10px;
 

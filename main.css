@@ -161,7 +161,7 @@ html {
   overflow-y: auto; }
 
 main {
-  height: 97vh;
+  height: 100vh;
   min-width: 340px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   font-family: 'Ubuntu', sans-serif;
@@ -184,10 +184,11 @@ main {
     width: 100%; } }
 
 .new-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Images/hockey-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Images/hockey-background.jpg);
+  transition: background 1s ease-in-out; }
 
 .video-container {
   position: absolute;
@@ -328,14 +329,16 @@ body {
 
 .intro {
   position: absolute;
-  top: 380px;
-  right: 10vw;
+  bottom: 5vh;
+  right: 15vw;
   color: white;
   font-size: 2.2rem;
-  opacity: 0; }
+  opacity: 0;
+  text-align: center; }
   @media (max-width: 800px) {
     .intro {
-      left: 5vw; } }
+      left: 2vw;
+      bottom: 2vh; } }
 
 .fade-in {
   opacity: 1;
@@ -492,12 +495,12 @@ nav {
     transition-property: left, width; }
 
 button.demo {
-  margin: 330px auto;
+  margin: 330px auto 0;
   opacity: 0;
-  transition: opacity 0.2 ease; }
+  transition: opacity 0.1 ease-in; }
   @media (max-width: 800px) {
     button.demo {
-      margin: 250px auto; } }
+      margin: 280px auto 0; } }
 
 .demo-button-wrapper {
   color: white;
@@ -562,7 +565,11 @@ button.demo {
     .demos .demo-slide-text h2 {
       padding: 5px;
       border-bottom: 2px solid rgba(99, 164, 255, 0.4);
-      font-size: 1.7rem; }
+      font-size: 1.7rem;
+      text-align: left; }
+      .demos .demo-slide-text h2 i {
+        font-size: 2.4rem;
+        padding: 0 15px 0 0; }
     .demos .demo-slide-text p {
       padding: 2px 2px 14px;
       border-bottom: 2px solid rgba(99, 164, 255, 0.4);
@@ -664,6 +671,14 @@ form {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color3', endColorstr='$color1',GradientType=0 );
   /* IE6-9 */ }
+  form i.fa {
+    color: rgba(99, 164, 255, 0.4);
+    font-size: 3.0rem;
+    margin: 2px 0 0 10px; }
+  form i.fa-window-close {
+    font-size: 1.5rem;
+    position: relative;
+    right: 5px; }
   form .form-title {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -677,8 +692,9 @@ form {
     margin: 0;
     padding: 0 4px;
     width: 100%; }
-    form .form-title .form-logo {
-      width: 100px; }
+    form .form-title button {
+      padding: 2px 7px;
+      margin: 0; }
     form .form-title > label {
       padding: 10px; }
       form .form-title > label:hover {

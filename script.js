@@ -58,7 +58,7 @@
 
 		    setTimeout(function() {
 		    	$('main').addClass('new-background');
-		    }, 14500);
+		    }, 14200);
 
 		    $('button.nav__buttons').on('click', (function() {
 		    	var modalActive=true;
@@ -82,7 +82,6 @@
 		    $('.forgot-password').on('click', (function() {
 		    	$('.forgot-password-modal').addClass('modal-appear');
 		    	var modalActive=true;
-
 		    }));
 
 		    $('.sign-up-button').on('click', (function() {

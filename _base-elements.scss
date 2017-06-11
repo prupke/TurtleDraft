@@ -10,7 +10,7 @@ html {
 }
 
 main {
-	height: 97vh;
+	height: 100vh;
 	min-width: 340px;
 	background: linear-gradient(
 		rgba(0, 0, 0, 0.4), 
@@ -43,13 +43,14 @@ main {
 }
 
 .new-background {
-	background: linear-gradient(
-		rgba(0, 0, 0, 0.6), 
-		rgba(0, 0, 0, 0.6)
-		), url(Images/hockey-background.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.6), 
+		rgba(0, 0, 0, 0.6)
+		), url(Images/hockey-background.jpg);
+	transition: background 1s ease-in-out;
 }
 
 .video-container {
