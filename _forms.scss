@@ -44,7 +44,7 @@ form {
 	// border: 1px solid $color2;
 	align-items: center;
 	min-height: 150px;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	cursor: default;
 	padding: 10px 4px 15px;
@@ -197,6 +197,7 @@ form {
 
 	@media (max-width: 600px) {
 		width: 100vw;
+		min-width: 380px;
 		padding: 0;
 		margin: 0px auto;
 	}
@@ -216,19 +217,24 @@ form {
 .modal {
 	// opacity: 0;
 	transition: opacity 0.2s ease;
-	top: -100px;
+	top: -300px;
 }
 
 .modal-appear {		// this class is called in a script and added to the .modal class
 	border-radius: $form-radius;
 	top: 70px;
+	left: calc(50% - 300px);
+	visibility: visible;
 	width: 600px;
 	height: auto;
 	display: flex;
 	flex-direction: column;
 	height: auto;
 	opacity: 1;
-	transition: top 0.2s ease;
+	transition: left 0.15s cubic-bezier(.47,.98,.83,.28);
+	form {
+		display: flex;
+	}
 }
 
 .close-window {   	// this styles the 'x' in the modal windows of the landing page
@@ -252,6 +258,8 @@ form {
 		position: relative;
 		cursor: pointer;
 		padding: 5px;
+		display: flex;
+		flex-direction: row;
 
 		&:hover {
 			border-bottom: none !important;
@@ -264,11 +272,12 @@ form {
 	// Box.
 	& + label:before {
 		content: '';
-		margin-right: 10px;
-		display: inline-block;
-		vertical-align: text-top;
-		width: 16px;
-		height: 16px;
+		margin-right: 8px;
+
+		justify-content: center;
+		// vertical-align: text-top;
+		width: 18px;
+		height: 18px;
 		background: white;
 	}
 
@@ -280,6 +289,7 @@ form {
 	// Box focus
 	&:focus + label {
 		color: $color5;
+		// position: relative;
 
 		&:before {
 			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
@@ -307,8 +317,8 @@ form {
 	&:checked + label:after {
 	content: '';
 	position: absolute;
-	right: 121px;
-	top: 12px;
+	right: 116px;
+	top: 14px;
 	background: white;
 	width: 2px;
 	height: 2px;

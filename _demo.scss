@@ -1,8 +1,8 @@
 .demo-start {
-	// overflow: auto !important;
+	position: absolute;
+	top: 70px;
 	cursor: default;
 	z-index: 20;
-	// display: none;
 	div {
 		padding: 20px;
 	}
@@ -11,16 +11,26 @@
 	}
 
 	.demo-pages {
-		width: 0px;
+		left: calc(50%-300px);
+		width: 60px;
+		height: auto;
+		opacity: 1;
+		position: absolute;
+		overflow: auto;
+			transition: all 1s ease;
+	transition-property: left, width;
 		// overflow: hidden;
 	}
 
 }
 
 button.demo {
-	margin: 200px auto;
+	margin: 330px auto;
 	opacity: 0;		
 	transition: opacity 0.2 ease;
+	@media (max-width: 800px) {
+		margin: 250px auto;
+	}
 }
 
 .demo-button-wrapper {
@@ -29,32 +39,36 @@ button.demo {
 	background: transparent;
 	margin: 20px auto;
 	display: absolute;
+
 } 
 
-.view-demo {
+.view-demo {				
 	opacity: 1 !important;
 	transition: opacity 0.2s ease;
 }
 
 .sign-up-button {
 	margin: 0px auto;
+
+}
+
+.sign-up-button.submit-button {
+	margin: 18px auto 2px;
 }
 
 .demos {
 	width: 600px;
-	color: white;
-	margin: 5px;
-	padding: 5px 0px;
+	color: $color4;
+	visibility: visible;
 	height: auto;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	// position: absolute;
 	top: 80px;
 	left: calc(50% - 300px);
-	overflow: hidden;
-	// opacity: 0;
-	transition: width 1s ease;
+	// overflow: hidden;
+	opacity: 1;
+	transition: opacity 0.15s ease-in;
 	background: $color3; /* Old browsers that do not support linear-gradients */
 	background: -moz-linear-gradient(top, $color3 0%, $color1 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color3), color-stop(100%,$color1)); /* Chrome,Safari4+ */
@@ -64,24 +78,58 @@ button.demo {
 	background: linear-gradient(to bottom, $color3 0%,$color1 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color3', endColorstr='$color1',GradientType=0 ); /* IE6-9 */
 	
-	.demo-slide-text {
-		padding: 0;
+	@media(max-width: 600px) {
+		margin: 0 auto;
+		width: 100vw;
+		min-width: 380px;
+		left: 0;
+		right: 0;
 	}
 
-	.demo-next, 
-	.demo-prev {
+	.demo-slide-text {
+		padding: 5px;
+		text-transform: none;
+
+		h2 {
+			padding: 5px;
+			border-bottom: 2px solid $color5;
+			font-size: 1.7rem;
+		}
+
+		p {
+			padding: 2px 2px 14px;
+			border-bottom: 2px solid $color5;
+			font-size: 1.2rem;
+		}
+	}
+
+	.demo-slider {
 		width: 30px;
 		margin: 10px 5px 5px 5px;
-		text-align: center;
+		position: relative;
 	}
 
 	.demo-prev {
 		position: relative;
-		left: -40px;
+		right: 27px;
 	}
+
+	.demo-next {
+		position: relative;
+		right: 3px;
+	}
+
 }
 
 .display-none {
-	display: none;
-	width: 0px;
+	visibility: hidden;
+	position: absolute;
+	width: 0;
+	opacity: 0;
+	height: 0;
+	transition: opacity 1s ease;
+	overflow: hidden;
+	* {
+		display: none;
+	}
 }

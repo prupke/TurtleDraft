@@ -19,64 +19,65 @@
 			// }
 
 			$('.turtle').addClass('turtle-move');
-			$('.draft').addClass('draft-move');
+			$('.life').addClass('life-move');
+
+			setTimeout(function() {
+		     $('.welcome-pitch').addClass('welcome-pitch-move');
+		 	}, 100);	
 
 			setTimeout(function() {
 		     $('.turtle').addClass('turtle-move2');
 		    }, 450);
 
 			setTimeout(function() {
-		     $('.draft').addClass('draft-move2');
+		     $('.life').addClass('life-move2');
 		    }, 450);
 
 			setTimeout(function() {
-		     $('.welcome-pitch').addClass('welcome-pitch-move');
-		 	}, 100);		    
+		     $('.title-dot').addClass('fade-in');
+		 	}, 900);	
 
-		    setTimeout(function() {
-		     $('.turtle').addClass('turtle-move3');
-		    }, 1500);
+		 //    setTimeout(function() {
+		 //     $('.turtle').addClass('turtle-move3');
+		 //    }, 1500);
 
-			setTimeout(function() {
-		     $('.draft').addClass('draft-move3');
-		    }, 1500);
+			// setTimeout(function() {
+		 //     $('.life').addClass('life-move3');
+		 //    }, 1500);
 
 		    setTimeout(function() {
 		     $('.welcome-pitch').addClass('welcome-pitch-move2');
+		     $('.intro').addClass('fade-in');
 		 	}, 1700);	
-
-			setTimeout(function() {   // this is only necessary for compatability with IE 
-		     $('.turtle').addClass('turtle-move4');
-		    }, 1850);
 
 		    setTimeout(function() {   
 		    	if(modalActive===false) {
 		     		$('.demo').addClass('view-demo');
-		    		// $('.demo-button-wrapper').addClass('display-none');
-
 		     	}
 		    }, 1850);
+
+		    setTimeout(function() {
+		    	$('main').addClass('new-background');
+		    }, 14500);
 
 		    $('button.nav__buttons').on('click', (function() {
 		    	var modalActive=true;
 		    	$('.demo-button-wrapper').addClass('display-none');
 		    	$('.modal').removeClass('modal-appear');
-		    	// $('button.demo').removeClass('view-demo');
-
 		    	$(this).next().addClass('modal-appear');
 		    }));
 
 		    $('.demo-next').on('click', (function() {    
 		    	$('.demos').addClass('display-none');
-		    	$(this).closest('.demos').next().removeClass('display-none')
-		    	// $(this).next().closest('.demos').removeClass('display-none');
+		    	$(this).closest('.demos').next().removeClass('display-none');
 		    }));
 
-		    $('.demo-prev').on('click', (function() {
+		    $('.demo-prev').on('click', (function() {    
 		    	$('.demos').addClass('display-none');
-		    	$(this).closest('.demos').prev().removeClass('display-none')
-		    	// $(this).next().closest('.demos').removeClass('display-none');
+		    	// console.log($(this).parents('.demos').prev('.demos'));
+		    	$(this).parents('.demos').prev('.demos').removeClass('display-none');
 		    }));
+
 
 		    $('.forgot-password').on('click', (function() {
 		    	$('.forgot-password-modal').addClass('modal-appear');
@@ -102,7 +103,7 @@
 
 		    $('.close-window').on('click', (function() {
 		    	$('.demo-button-wrapper').removeClass('display-none');
-
+		    	// $(this).closest('form').reset();
 		    	$('button.demo').addClass('view-demo');
 		    	var modalActive=false;
 		    }));
